@@ -1,0 +1,189 @@
+/* 1. Reset và Nền toàn trang */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #cbd5e1; /* Nền xanh xám đục giống hình mẫu */
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 2. Khung Header chính */
+header {
+    background: linear-gradient(135deg, #38bdf8 0%, #6366f1 55%, #a855f7 100%);
+    width: 100%;
+    max-width: 850px;
+    border-radius: 16px;
+    padding: 25px 30px;
+    box-shadow: 0 8px 20px -6px rgba(99, 102, 241, 0.45);
+    margin-bottom: 20px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header hgroup h1 {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 6px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+header hgroup h2 {
+    color: #e0e7ff;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+/* Ảnh đại diện tròn góc phải */
+.avatar {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Nút màu trong Nav */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 13px;
+    display: inline-block;
+}
+
+nav ul li:nth-child(1) a {
+    background-color: #e0f2fe; /* Giới thiệu: Xanh nhạt */
+    color: #0369a1;
+}
+
+nav ul li:nth-child(2) a {
+    background-color: #fecdd3; /* Kỹ năng: Hồng nhạt */
+    color: #be123c;
+}
+
+nav ul li:nth-child(3) a {
+    background-color: #e2e8f0; /* Liên hệ: Xám nhạt */
+    color: #475569;
+}
+
+/* Bố cục Main chia 3 cột */
+main {
+    width: 100%;
+    max-width: 850px;
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1fr;
+    gap: 18px;
+    margin-bottom: 20px;
+}
+
+/* Kiểu dáng chung cho cả 3 ô (section) */
+section {
+    background: #ffffff;
+    padding: 22px 20px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px -5px rgba(148, 163, 184, 0.25); /* Đổ bóng mịn màu xanh xám */
+    border: 1px solid #e2e8f0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px -5px rgba(148, 163, 184, 0.35);
+}
+
+/* 1. Ô Giới thiệu: Phủ nền mờ xanh dương nhạt nhẹ */
+#gioithieu {
+    background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 40%);
+    border-top: 4px solid #38bdf8;
+}
+
+/* 2. Ô Kỹ năng: Phủ nền mờ xanh lá/ngọc nhạt nhẹ */
+#kynang {
+    background: linear-gradient(180deg, #f0fdf4 0%, #ffffff 40%);
+    border-top: 4px solid #4ade80;
+}
+
+/* 3. Ô Liên hệ: Phủ nền mờ xám/xanh băng nhạt nhẹ */
+#lienhe {
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 40%);
+    border-top: 4px solid #94a3b8;
+}
+
+/* Chỉnh lại tiêu đề bên trong từng ô */
+section h2 {
+    color: #0f172a;
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 14px;
+}
+
+#gioithieu p {
+    font-size: 13px;
+    color: #475569;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+#kynang ul {
+    list-style: none;
+}
+
+#kynang ul li {
+    font-size: 13px;
+    color: #334155;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+#kynang ul li::before {
+    content: "✔";
+    color: #0284c7;
+    font-size: 12px;
+}
+
+#lienhe address {
+    font-style: normal;
+    font-size: 13px;
+    color: #334155;
+    line-height: 1.8;
+}
+
+#lienhe address a {
+    color: #0284c7;
+    text-decoration: none;
+}
+
+/* 4. Footer thanh màu xanh */
+footer {
+    width: 100%;
+    max-width: 850px;
+    text-align: center;
+    padding: 12px;
+    background-color: #3b82f6;
+    color: #ffffff;
+    font-size: 12px;
+    border-radius: 6px;
+}
